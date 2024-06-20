@@ -88,6 +88,18 @@ Jenkins类主要负责对jenkins业务进行封装，不关系具体实现
 
 伪代码如下
 
+
+
+jenkins 类可以有一些更加复杂的业务方法，比如要调用多个接口的业务方法。
+这种复杂业务方法的封装。。。后续
+
+关于参数：
+    通常都是简单数据类型，比如 字符串，整数之类，如果参数过多，我们还需要对其简化
+    例如有点业务方法有几十个参数，那么这十几个参数可以结合为一个复杂数据类型的参数
+    def 某个方法(username,payload):
+        return self.rest_client.post(usr=xxx,json=payload)
+
+'''
 class Jenkins:
     def __init__(self, username, password):
         self.rest_client = RestClient()
@@ -100,18 +112,6 @@ class Jenkins:
     def 添加权限(self, username, previlege):
         payload = {'username': username, 'previlege': previlege}
         return self.rest_client.post(url=xxx, json=payload)
-
-jenkins 类可以有一些更加复杂的业务方法，比如要调用多个接口的业务方法。
-这种复杂业务方法的封装。。。后续
-
-关于参数：
-    通常都是简单数据类型，比如 字符串，整数之类，如果参数过多，我们还需要对其简化
-    例如有点业务方法有几十个参数，那么这十几个参数可以结合为一个复杂数据类型的参数
-    def 某个方法(username,payload):
-        return self.rest_client.post(usr=xxx,json=payload)
-
-'''
-
 
 
 
@@ -145,15 +145,14 @@ Jenkins 用作父类  包含公共逻辑
 
 还可以组合一个SSHClient类的对象，支持修改服务端文件的功能
 
+
+'''
 class Jenkins:
     def __init__(self, username, password):
         self.rest_client = RestClient()
         self.selenium_client = SeleniumClient()
         self.ssh_client = SSHClient()
         ...
-'''
-
-
 
 
 
