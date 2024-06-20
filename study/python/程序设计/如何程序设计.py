@@ -88,7 +88,18 @@ Jenkins类主要负责对jenkins业务进行封装，不关系具体实现
 
 伪代码如下
 
+class Jenkins:
+    def __init__(self, username, password):
+        self.rest_client = RestClient()
+        self.rest_client.xxxx = xxxxxxx  # 做一些配置
 
+    def 注册账号(self, username, xxxx):
+        payload = {'username': username, 'xxxx': xxxx}
+        return self.rest_client.post(url=xxx, json=payload)
+
+    def 添加权限(self, username, previlege):
+        payload = {'username': username, 'previlege': previlege}
+        return self.rest_client.post(url=xxx, json=payload)
 
 jenkins 类可以有一些更加复杂的业务方法，比如要调用多个接口的业务方法。
 这种复杂业务方法的封装。。。后续
@@ -102,18 +113,7 @@ jenkins 类可以有一些更加复杂的业务方法，比如要调用多个接
 '''
 
 
-class Jenkins:
-    def __init__(self, username, password):
-        self.rest_client = RestClient()
-        self.rest_client.xxxx = xxxxxxx  # 做一些配置
 
-    def 注册账号(self, username, xxxx):
-        payload = {'username': username, 'xxxx': xxxx}
-        return self.rest_client.post(url=xxx, json=payload)
-
-    def 添加权限(self, username, previlege):
-        payload = {'username': username, 'previlege': previlege}
-        return self.rest_client.post(url=xxx, json=payload)
 
 
 ##5.错误的设计：过多的业务类
@@ -145,15 +145,33 @@ Jenkins 用作父类  包含公共逻辑
 
 还可以组合一个SSHClient类的对象，支持修改服务端文件的功能
 
-
-'''
-
-
 class Jenkins:
     def __init__(self, username, password):
         self.rest_client = RestClient()
         self.selenium_client = SeleniumClient()
         self.ssh_client = SSHClient()
         ...
+'''
 
 
+
+
+
+##7.对象组合中添加捷径
+'''
+对象的组合具有传递性
+对象a 组合对象b,对象b组合对象c,对象c中组合对象d
+则可以通过a.b.c.d的写法 从a调用d的方法
+
+self.d = self.b.c.d
+'''
+
+
+#####总结
+'''
+组合模式：
+    1.模块化程序设计：任务拆解成小任务
+    2.面向过程程序设计：按照时间线顺序直接设计方法完成小任务
+    3.面向对象程序设计：把类和对象设计得想活生生的人，每个人都有自己的想法和行为。 每个人只负责应该由自己完成的任务
+    
+'''
