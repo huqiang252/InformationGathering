@@ -12,9 +12,10 @@
 
 切源管理台的能力
     源管理
-        展业地由后端返回，后台从nacos配置中获取
-        [{"areaCode":"MAS","areaCnName":"马来","seq":"02"},{"areaCode":"HK","areaCnName":"香港","seq":"01"},{"areaCode":"SGP","areaCnName":"新加坡","seq":"03"}]
     站点管理
+        新增站点（展业地，站点名称，站点代码，优先级，描述信息，接入点切量配置）
+            展业地：
+            接入点切量配置：
     切源管理
     切源记录
     配置推送
@@ -29,7 +30,7 @@
 (2)log  存储在ELK系统
 (3)LCM 根据规则，触发规则回调
 (4)回调通知到 切源管理台
-    TODO:lcm相关接口?
+    lcm相关接口  https://e5mgsch64p.feishu.cn/wiki/E2U6w0r3Xif4grkfu74cDQ8Pnvd
     一个是查询，用来查询规则
     一个是回调：告警触发调行情接口--切源管理台进行切源判断
 
