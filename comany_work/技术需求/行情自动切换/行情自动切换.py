@@ -4,6 +4,8 @@
 # @Time: 2024-06-21
 ##1.切源管理台的能力
 '''
+需求：https://e5mgsch64p.feishu.cn/wiki/ZaKCwqj4uim0ZBkwa9PcREfKnHN
+
 1.涉及哪些系统？
 客户端：app，pc
 切源管理台
@@ -11,14 +13,14 @@
 切源规则对象lcm
 
 1切源管理台的能力
-    源管理 TODO：具体是指？展业地？
+    源管理
+        从nacos获取展业地消息,group=hq-admin-global-config-server
     站点管理 TODO ：权限控制如何，哪些角色可以使用
         新增站点（展业地，站点名称，站点代码，优先级，描述信息，接入点切量配置）
             展业地：后端返回，从nacos配置获取---那意味只能选择？
             接入点切量配置： TODO: 核心功能，怎么支持用户id,区域，时间切量配置；全切怎么配置？ 选择用户，如果没有用户怎么搞？表达式如何编写？
                 符合：流量走此站点接入点
                 不符合：走默认站点的接入点
-
         列表
             传参：展业地
             返回：
@@ -228,11 +230,12 @@
 (2)log  存储在ELK系统
 (3)LCM 根据规则，触发规则回调(TODO:可以模拟触发测试环境规则和线上？）
     lcm相关接口  https://e5mgsch64p.feishu.cn/wiki/E2U6w0r3Xif4grkfu74cDQ8Pnvd
-            一个是查询，用来查询规则（获取行情相关告警规则） TODO:接口失败了如何处理，账号过期了怎么处理（离职等），有没有做缓存逻辑？
+            一个是查询，用来查询规则（获取行情相关告警规则）
                 https://vops.hszq8.com/logmonitor/api/v1/openapi/get_hq_alter_rule
                     传参：
-                        账号：account  （必填）
+                        账号：account  （必填）---nacos获取的
                         密码：secret  （必填）
+                    采用白名单方式授权
             一个是回调：告警触发调行情接口--切源管理台进行切源判断（修改行情告警规则是否启用告警触发推送）
                 https://vops.hszq8.com/logmonitor/api/v1/openapi/put_hq_alter_action
                     传参：
@@ -370,3 +373,4 @@ PC
 
 
 
+####设计类和对象
