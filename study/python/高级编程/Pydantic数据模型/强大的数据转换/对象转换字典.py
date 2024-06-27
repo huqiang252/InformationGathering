@@ -19,6 +19,7 @@ class User(BaseModel):
     phone: str = Field(default="13800138000", min_length=11, max_length=11)
 
 user = User(name="Tom", age=22, email="alice@example.com")
-data = User.model_dump(user)
+# data = User.model_dump(user)
+data = user.dict()
 print(data)
 print(type(data))
