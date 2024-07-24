@@ -28,7 +28,7 @@ def process_product_data(data: Dict[str, Any]) -> Product:
 product_data = {
     "id": "123",  # 这里故意使用字符串类型来测试验证
     "name": "Laptop",
-    "price": "sjflj"
+    "price": "3.15"
 }
 
 try:
