@@ -3,11 +3,6 @@
 # @Author  : qiang.hu
 # @Time: 2024-07-24
 
-
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Author  : qiang.hu
-# @Time: 2024-07-21
 from rediscluster import RedisCluster
 # from scripts.utils.log import Log
 
