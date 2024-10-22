@@ -6,7 +6,7 @@ from datetime import datetime
 start_time=datetime(2024,10,22,11,8,44,61186)
 
 end_time=datetime.now()
-print(end_time)  #2024-10-22 11:08:16.216342
+print(end_time)  #2024-10-22 11:41:13.813260
 
 time_elapsed= end_time-start_time
-print(time_elapsed.total_seconds())
+print(time_elapsed.total_seconds())  #1949.752074
