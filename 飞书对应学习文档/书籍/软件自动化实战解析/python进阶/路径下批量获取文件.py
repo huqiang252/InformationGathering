@@ -16,3 +16,8 @@ print()
 
 for f in Path.cwd().glob('自定义排序*.py'): #根据通配符过滤文件
     print(f.name)
+
+
+#获取文件大小
+new_path = Path('D:\InformationGathering\飞书对应学习文档\书籍\软件自动化实战解析\python进阶')
+print(new_path.stat().st_size) #4096（字节单位）

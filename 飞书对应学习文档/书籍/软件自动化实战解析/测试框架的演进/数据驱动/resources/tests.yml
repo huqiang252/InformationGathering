@@ -1,0 +1,13 @@
+##模板
+- description: Adjacent whitespaces can be removed as expected
+  priority: p1
+  input: " \t ab"
+  expected: ab
+- description: Separated whitespaces can be removed as expected
+  priority: p2
+  input: " ab \t c"
+  expected: abc
+- description: 尾部的空白字符可以被正确删除
+  priority: p3
+  input: "ab "
+  expected: ab
