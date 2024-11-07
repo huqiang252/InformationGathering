@@ -1,0 +1,27 @@
+environments:
+  prod:
+    market:
+      base_url: https://market-api.example.com
+      endpoints:
+        market_data: /api/v1/market/{market_code}
+        order_book: /api/v1/market/order_book/{market_code}
+        # 其他接口...
+    trade:
+      base_url: https://trade-api.example.com
+      endpoints:
+        place_order: /api/v1/trade/place_order
+        cancel_order: /api/v1/trade/cancel_order
+        # 其他接口...
+  uat:
+    market:
+      base_url: https://market-api-uat.example.com
+      endpoints:
+        market_data: /api/v1/market/{market_code}
+        order_book: /api/v1/market/order_book/{market_code}
+        # 其他接口...
+    trade:
+      base_url: https://trade-api-uat.example.com
+      endpoints:
+        place_order: /api/v1/trade/place_order
+        cancel_order: /api/v1/trade/cancel_order
+        # 其他接口...

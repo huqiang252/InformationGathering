@@ -15,7 +15,8 @@ from mitmproxy.tools.main import mitmdump,mitmweb
 #mitmdump --set bandwidth=100
 
 # mitmdump(['-s', 'mitmTcpDemo.py'])
-mitmdump(['-s', setting.mitmproxy_path,'--ssl-insecure'])  #主站
+# mitmdump(['-s', setting.mitmproxy_path,'--ssl-insecure'])  #主站
+mitmdump(['-s', setting.mitmproxy_newpath,'--ssl-insecure'])  #主站
 
 
 # os.system(

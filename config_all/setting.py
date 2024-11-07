@@ -10,3 +10,5 @@ sys.path.append(BASE_DIR)
 #mitmmproxy 运行路径
 mitmproxy_path=os.path.join( BASE_DIR, 'mitmproxyRun', 'mitmdumpHelp.py' )
 print(mitmproxy_path)
+
+mitmproxy_newpath=os.path.join( BASE_DIR, 'mitmproxyRun', 'mitmdump2.0.py' )
