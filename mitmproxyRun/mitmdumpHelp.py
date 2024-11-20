@@ -73,8 +73,6 @@ class Counter:
                                        ensure_ascii=False ) )  # 修改完成后，奖python对象转成json字符串，set进请求的响应体重发送给客户端;ensure_ascii:默认是True：字符之外的显示为\u4e2d\u56fd
 
 
-
-
 addons = [
     Counter()
 ]
