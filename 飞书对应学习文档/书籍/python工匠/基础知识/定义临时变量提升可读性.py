@@ -11,3 +11,6 @@ user_is_eligible = user.is_active and (user.sex == 'female' or user.level > 3)
 
 if user_is_eligible:
     user.add_coins(10000)
+
+
+
