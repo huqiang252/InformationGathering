@@ -1,5 +1,7 @@
-
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# author： huqiang
+# datetime： 2024/11/30
 
 def counter():
     value = 0
@@ -9,3 +11,12 @@ def counter():
         value += 1
         return value
     return _counter
+
+
+if __name__ == '__main__':
+    c = counter()
+    print(c()) #1
+    print(c()) #2
+
+    c2 = counter()
+    print(c2()) #1
