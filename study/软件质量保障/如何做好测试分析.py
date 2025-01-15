@@ -4,6 +4,9 @@
 # @Time: 2024-06-21
 
 ##1.测试分析vs 测试设计
+
+#文档： https://blog.csdn.net/hlsxjh/article/details/143515819
+
 '''
 测试分析 = 测试指导思想
 测试设计 = 测试指导行动
