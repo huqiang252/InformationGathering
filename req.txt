@@ -23,8 +23,6 @@ lxml==5.3.0
 mando==0.7.1
 MarkupSafe==3.0.2
 mccabe==0.7.0
-mitmproxy==9.0.1
-mitmproxy_wireguard==0.1.23
 msgpack==1.0.8
 passlib==1.7.4
 protobuf==4.25.5

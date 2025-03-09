@@ -21,3 +21,9 @@ class RTrieNode:
     def __post_init__(self):
         if len(self.next_) != self.size:
             raise ValueError(f"Invalid length provided for next list")
+
+
+if __name__ == '__main__':
+    root = RTrieNode(value=0)
+    print(root.next_)
+    root.next_[0] = RTrieNode(value=1)

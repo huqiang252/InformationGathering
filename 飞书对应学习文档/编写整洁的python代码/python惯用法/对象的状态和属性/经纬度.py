@@ -30,3 +30,10 @@ class Coordinate:
         if long_value not in range(-180, 180 + 1):
             raise ValueError(f"{long_value} is an invalid value for longitude")
         self._longitude = long_value
+
+
+if __name__ == '__main__':
+    c = Coordinate(lat=30, long=120)
+    print(c.latitude, c.longitude)
+
+    c2 = Coordinate(lat=30, long=181)
