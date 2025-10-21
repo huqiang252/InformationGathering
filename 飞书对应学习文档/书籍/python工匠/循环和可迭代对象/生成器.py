@@ -14,7 +14,7 @@ def range_7_gen(start, end):
 
 if __name__ == '__main__':
     nums = range_7_gen(0,20)
-
-    print(next(nums)) #7
-    print(next(nums)) #14
-    print(next(nums)) #17
+    print(list(num for num in nums))
+    # print(next(nums)) #7
+    # print(next(nums)) #14
+    # print(next(nums)) #17

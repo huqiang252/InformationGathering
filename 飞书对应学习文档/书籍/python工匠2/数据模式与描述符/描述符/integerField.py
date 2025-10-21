@@ -59,5 +59,5 @@ if __name__ == '__main__':
     r.width=5
     print(r.width) #5
     print(r.height) #1 不会被更改了
-    r.width=100 #ValueError: value must between 1 and 10!
+    # r.width=100 #ValueError: value must between 1 and 10!
 

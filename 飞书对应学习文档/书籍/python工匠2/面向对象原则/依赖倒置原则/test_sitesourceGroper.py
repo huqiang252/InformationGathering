@@ -5,7 +5,7 @@
 # 文件名称   ：test_sitesourceGroper.py
 
 
-
+from collections import Counter
 
 def test_grouper_from_local():
     page = LocalHNWebPage(path="./static_hn.html")

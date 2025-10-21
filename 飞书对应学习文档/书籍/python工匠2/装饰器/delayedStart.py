@@ -24,10 +24,10 @@ class DelayedStart:
 def hello():
     print('hello world!')
 
-print(hello) #<__main__.DelayedStart object at 0x0000018BBA84DF70>  代表hello函数变成了装饰类DeLayedStart的实例
-
-print(type(hello)) #<class '__main__.DelayedStart'>
-print(hello.__name__) #hello
+# print(hello) #<__main__.DelayedStart object at 0x0000018BBA84DF70>  代表hello函数变成了装饰类DeLayedStart的实例
+#
+# print(type(hello)) #<class '__main__.DelayedStart'>
+# print(hello.__name__) #hello
 
 #Wait for 1 second before starting...
 # hello world!

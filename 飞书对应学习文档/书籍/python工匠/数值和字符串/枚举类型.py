@@ -28,3 +28,17 @@ def add_daily_points(user):
     user.points += DAILY_POINTS_REWARDS
     return
 
+
+class User:
+    def __init__(self, type, points):
+        self.type = type
+        self.points = points
+
+
+if __name__ == '__main__':
+
+    print(UserType.VIP)  #UserType.VIP
+    user = User(type=UserType.VIP, points=0)
+    add_daily_points(user)
+    print(user.points)
+

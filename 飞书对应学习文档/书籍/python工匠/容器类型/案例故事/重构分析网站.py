@@ -54,12 +54,17 @@ class PerfLevelDict(MutableMapping):
         return PagePerfLevel.GT_1000
 def analyze_v2():
     path_groups = defaultdict(PerfLevelDict)
+
     with open("logs.txt", "r") as fp:
         for line in fp:
             path, time_cost = line.strip().split()
             path_groups[path][time_cost] += 1
+
+
     for path, result in path_groups.items():
+
         print(f'== Path: {path}')
+        # print(f'result={dict(result.items())}')
         print(f'   Total requests: {result.total_requests()}')
         print(f'   Performance:')
         for level_name, count in result.items():

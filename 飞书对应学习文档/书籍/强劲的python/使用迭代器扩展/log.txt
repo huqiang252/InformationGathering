@@ -1,0 +1,4 @@
+WARNING: Disk usage exceeding 85%
+DEBUG: User 'tinytim' upgraded to Pro version
+INFO: Sent email campaign, completed normally
+WARNING: Almost out of beer
